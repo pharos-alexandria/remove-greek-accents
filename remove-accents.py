@@ -11,5 +11,5 @@ with open(infile, 'r') as fin:
     contents = fin.read()
     
 with open(outfile, 'w') as fout:
-    newcontents = unicodedata.normalize("NFKD", contents).translate({ord(c): None for c in "̓̔́̀͂ͅ"})
+    newcontents = unicodedata.normalize("NFKD", contents).translate({ord(c): None for c in "̓̔́̀͂̈ͅ"})
     fout.write(newcontents)
